@@ -1,38 +1,128 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  border-radius: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App:hover{
+   box-shadow: 1px 1px 10px  rgb(165, 255, 255);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-section {
+  border-radius: 1rem;
+  color: white;
+  width: 47%;
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.score {
+  border-radius: 50%;
+  width: 50%;
+  background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 2.5rem 0.6rem;
+}
+.result{
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.total-mark{
+  color: rgb(182, 182, 182);
+}
+
+.grade{
+  
+  font-size: 2rem;
+}
+
+.text-area{
+  width: 65%;
+  margin: 1rem 0rem;
+  margin-bottom: 1.5rem;
+  font-weight: 100;
+  color: rgb(215, 215, 215);
+}
+
+
+
+.right-section {
+  text-align: start;
+  width: 47%;
+}
+
+.category{
+  text-align: center;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+.category-card{
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 1.5rem;
+}
+.continue-button{
+  border: none;
   color: white;
+  width: 80%;
+  border-radius: 1.5rem;
+  padding: 0.8rem 1rem;
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  cursor: pointer;
+  margin-bottom: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.button{
+  display: flex;
+  justify-content: center;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-layout{
+  margin: 1rem ;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+.icon-category{
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.summary{
+  margin-left: 1.5rem;
+  text-align: start;
+}
+
+
+
+@media screen and (max-width :600px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    height: 100vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .left-section{
+    width: 100%;
+    padding-top: 4rem;
   }
+  .right-section{
+    width: 100%;
+  }
+  
 }
